@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+/home/bruno/eclipse-workspace/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+1028576651.index
+2002315849.index
+2443575073.index
+564395114.index
+4167721740.index
+2129893437.index
