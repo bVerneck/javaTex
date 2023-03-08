@@ -9,7 +9,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("home")
+@WebServlet("/home")
 
 public class HomeServlet extends HttpServlet{
 	
@@ -17,17 +17,21 @@ public class HomeServlet extends HttpServlet{
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 	
-		String parameter = request.getParameter("");
+		String nome = request.getParameter("nome");
+		String text= String.valueOf(request.getParameter("text"));
 		
 		PrintWriter saida = response.getWriter();
 		saida.println("<html>");
 		saida.println("<body>");
-
-		saida.println("va a merda ester");
-		saida.println("teste 2");
 		
-		saida.println("<body>");
-		saida.println("<html>");
+		saida.println("<h2>");
+
+		saida.println(nome);
+		saida.println(text);
+		saida.println("</h2>");
+		
+		saida.println("</body>");
+		saida.println("</html>");
 		
 		
 		
