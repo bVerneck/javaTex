@@ -1,0 +1,32 @@
+package br.com.motos.servelet;
+
+import java.io.IOException;
+
+import br.com.motos.modelo.Moto;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+public class cadastraMoto extends HttpServlet {
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String marca = req.getParameter("marca");
+		String modelo = req.getParameter("modelo");
+		Integer ano = Integer.valueOf(req.getParameter("ano"));
+		
+		Moto moto= new Moto(marca, modelo, ano);
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

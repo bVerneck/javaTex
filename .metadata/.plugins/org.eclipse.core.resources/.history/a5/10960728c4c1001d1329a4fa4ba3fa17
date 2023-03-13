@@ -1,0 +1,48 @@
+package br.com.motos.modelo;
+
+public class Moto {
+//	private Integer id;
+	private String marca;
+	private String modelo;
+	private Integer ano;
+	
+	
+	public Moto(String marca, String modelo, Integer ano) {
+		this.marca = marca;
+		this.modelo = modelo;
+		this.ano = ano;
+		
+	}
+	
+	public String getMarca() {
+		return marca;
+	}
+	public String getModelo() {
+		return modelo;
+	}
+	public Integer getAno() {
+		return ano;
+	}
+
+	@Override
+	public String toString() {
+		return "moto [marca=" + marca + ", modelo=" + modelo + ", ano=" + ano + "]";
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+}

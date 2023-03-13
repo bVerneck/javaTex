@@ -1,0 +1,25 @@
+package br.com.motos.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import br.com.motos.modelo.Moto;
+
+public class MotoDao {
+	
+	private static List<Moto> motos = new ArrayList<>();
+	
+	public void cadastra(Moto moto) {
+		MotoDao.motos.add(moto);
+		
+		
+	}
+	public int numeroDeMotos() {
+		return MotoDao.motos.size();
+	}
+	
+	
+	
+	
+
+}

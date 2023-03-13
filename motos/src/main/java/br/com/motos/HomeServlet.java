@@ -14,7 +14,7 @@ import jakarta.servlet.http.HttpServletResponse;
 public class HomeServlet extends HttpServlet{
 	
 	@Override
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 	
 		String nome = request.getParameter("nome");
