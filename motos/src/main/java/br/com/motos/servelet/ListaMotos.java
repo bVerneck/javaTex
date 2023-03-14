@@ -26,18 +26,31 @@ public class ListaMotos extends HttpServlet{
 		
 		
 		MotoDao dao = new MotoDao();
-//		List<Moto> motos = dao.lista();
+		List<Moto> motos = dao.lista();
 		
 		PrintWriter saida= resp.getWriter();
 		saida.println("<html>");
 		saida.println("<body>");
 		
-//		saida.println("<ul>");
-//		for(Moto moto : motos) {
-//			saida.println("<li>" + moto + "</li>");
-//			
-//		}
-		saida.println("</ul>");
+		saida.println("<table>");
+		
+		saida.println("<tr>");
+		saida.println("<td>|id|</td>");
+		saida.println("<td>|marca|</td>");
+		saida.println("<td>|modelo|</td>");
+		saida.println("<td>|ano|</td>");
+		saida.println("<tr>");
+		
+		for(Moto moto : motos) {
+			
+			saida.println("<tr>");
+			saida.println("<td><a href='/motos/busca?id='"+ moto.getId() +">" + moto.getId() + "</a></td>");
+			saida.println("<td>" + moto.getMarca() + "</td>");
+			saida.println("<td>" + moto.getModelo() + "</td>");
+			saida.println("<td>" + +moto.getAno() + "</td>");
+			saida.println("</tr>");	
+		}
+		saida.println("</table>");
 		
 		saida.println("</body>");
 		saida.println("</html>");
