@@ -37,6 +37,8 @@ public class CadastraMoto extends HttpServlet {
 		
 		saida.println("moto: "+ modelo + " cadastro feito");
 		
+		saida.println("<a href='/motos/lista'>Ir Para Lista</a>");
+		
 		saida.println("</body>");
 		saida.println("</html>");
 		

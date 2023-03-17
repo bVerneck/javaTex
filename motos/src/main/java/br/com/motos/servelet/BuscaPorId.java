@@ -28,6 +28,8 @@ public class BuscaPorId extends HttpServlet {
 		saida.println("<b>Modelo: </b>" + moto.getModelo());
 		saida.println("<br />");
 		saida.println("<b>Ano: </b>" + moto.getAno());
+		saida.println("<br />");
+		saida.println("<a href='/motos/lista'>Voltar</a>");
 
 		saida.println("</body></html>");
 	}

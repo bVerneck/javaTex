@@ -39,18 +39,25 @@ public class ListaMotos extends HttpServlet{
 		saida.println("<td>|marca|</td>");
 		saida.println("<td>|modelo|</td>");
 		saida.println("<td>|ano|</td>");
+		saida.println("<td></td>");
+		saida.println("<td></td>");
 		saida.println("<tr>");
 		
 		for(Moto moto : motos) {
 			
 			saida.println("<tr>");
-			saida.println("<td><a href='/motos/busca?id='"+ moto.getId() +">" + moto.getId() + "</a></td>");
+			saida.println("<td><a href='/motos/busca?id="+ moto.getId() +"'>" + moto.getId() + "</a></td>");
 			saida.println("<td>" + moto.getMarca() + "</td>");
 			saida.println("<td>" + moto.getModelo() + "</td>");
 			saida.println("<td>" + +moto.getAno() + "</td>");
+			saida.println("<td> <a href='/motos/deleta?id="+moto.getId()+"'>Excluir<a/> </td>");
+			saida.println("<td> <a href='/motos/preparaAtualiza?id="+moto.getId()+"'>Editar<a/> </td>");
+			saida.println("</b> <br/>");
 			saida.println("</tr>");	
 		}
 		saida.println("</table>");
+		saida.println("<b/> <br/>");
+		saida.println("<a href='/motos/cadastra.html'>Cadastrar Moto</a>");
 		
 		saida.println("</body>");
 		saida.println("</html>");

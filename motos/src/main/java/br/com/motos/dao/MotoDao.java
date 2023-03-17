@@ -90,4 +90,55 @@ public class MotoDao {
 		return moto;
 	}
 
-}
+	public void deleta(Integer id) {
+		
+		try {
+		Connection conn = JdbcFactory.getConnection();
+		String sql ="delete from motos where id =?";
+		PreparedStatement ps = conn.prepareStatement(sql);
+		ps.setInt(1, id);
+		ps.execute();
+		ps.close();
+		conn.close();
+		}catch(SQLException e){
+			e.printStackTrace();
+		          }
+		
+		}
+
+	public void editar(Moto moto) {
+		
+		try {
+			
+			String sql ="update motos set marca =?, modelo =?, ano=? where id = ?";
+			Connection conn = JdbcFactory.getConnection();
+			PreparedStatement ps = conn.prepareStatement(sql);
+			
+			ps.setString(1, moto.getMarca());
+			ps.setString(2, moto.getModelo());
+			ps.setInt(3, moto.getAno());
+			ps.setInt(4, moto.getId());
+			
+			ps.execute();
+			ps.close();
+			conn.close();
+		
+			}catch(SQLException e){
+				e.printStackTrace();
+			          }
+			
+			}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
